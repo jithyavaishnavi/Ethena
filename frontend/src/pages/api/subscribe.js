@@ -20,6 +20,7 @@ export default async function handler(req, res) {
       res.status(500).json({ success: false, message: 'Failed to subscribe.' });
     }
   } else {
-    res.status(405).json({ message: 'Method not allowed' });
+    res.setHeader('Allow', ['POST']);
+    res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 }
