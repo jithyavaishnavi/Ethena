@@ -91,7 +91,7 @@ const FooterCTA = () => {
             <div className="text-sm text-gray-300 space-y-1">
               <p>info@Ethena.org</p>
               <p>Tel: 123-456-7890</p>
-              <p>500 Terry Francine Street, San Francisco, CA</p>
+              <p>Bengaluru, India</p>
             </div>
 
             <div className="flex space-x-4 mt-6 text-white text-lg">
@@ -138,7 +138,7 @@ const FooterCTA = () => {
 
         {/* Footer Bottom Text Centered */}
         <div className="pt-12 text-center text-xs text-[#c8a2c8] opacity-80 hover:opacity-100 transition">
-          © 2025 Ethena
+          © 2025 Jithya Vaishnavi
         </div>
       </footer>
     </div>

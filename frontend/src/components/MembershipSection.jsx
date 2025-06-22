@@ -58,9 +58,23 @@ export function MembershipSection() {
     <section className="bg-black text-white font-poppins px-6 md:px-12 py-20">
       <div className="max-w-6xl mx-auto text-left">
         <h1 className="text-3xl lg:text-5xl font-bold mb-8">JOIN OUR COMMUNITY</h1>
-        <p className="text-base lg:text-lg mb-16">
-          Membership is open to all women and non-binary individuals interested in Ethereum protocol development.
+
+        <p className="text-base lg:text-lg mb-16 leading-relaxed space-y-4">
+          <strong>Why join Ethana Ethereum?</strong>
+          <br /><br />
+          <strong>1. Inclusive & Supportive Community:</strong> Open to all women and non-binary individuals, fostering a space where everyone can grow, learn, and collaborate.
+          <br /><br />
+          <strong>2. Learn Ethereum Protocol Development:</strong> Gain hands-on experience with cutting-edge blockchain technology. Stay updated on the latest advancements in Ethereum.
+          <br /><br />
+          <strong>3. Network with Industry Leaders:</strong> Connect with developers, researchers, and leaders in the Ethereum ecosystem. Build meaningful relationships for mentorship and collaboration.
+          <br /><br />
+          <strong>4. Develop Your Skills:</strong> Participate in workshops, hackathons, talks, and study groups. From foundational concepts to advanced Ethereum Improvement Proposals (EIPs), there’s something for everyone.
+          <br /><br />
+          <strong>5. Promote Diversity in Tech:</strong> Help increase diversity and representation within the blockchain and Web3 communities.
+          <br /><br />
+          <strong>6. Contribute & Make an Impact:</strong> Play a role in shaping the future of decentralized technologies and one of the world’s most important blockchain platforms.
         </p>
+
       </div>
 
       <div className="grid grid-cols-1 max-w-6xl mx-auto text-left">

@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} bg-black text-white antialiased`}
       >
         {/* 🧭 Navbar */}
-        <nav className="relative z-10 w-full flex justify-center items-center py-6 px-6 sm:px-10 md:px-16 lg:px-24 text-xl mb-24">
+        <nav className="relative z-10 w-full flex justify-center items-center py-6 px-6 sm:px-10 md:px-16 lg:px-24 text-xl mb-6">
 
           {/* 🌟 Logo (Left corner) */}
           <div className="absolute top-3 left-6 text-4xl font-extrabold text-[#ffffff] font-montserrat tracking-wide hover:scale-105 transition-transform cursor-pointer">
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
           </ul>
 
           {/* 🍔 Mobile Menu Toggle (Right corner) */}
-          <div className="md:hidden absolute top-6 right-6">
+          <div className="md:hidden absolute top-3 right-6">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-white text-3xl focus:outline-none"

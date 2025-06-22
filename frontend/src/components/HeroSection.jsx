@@ -22,7 +22,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative bg-black text-white pb-16 h-[80vh] pb-16 overflow-hidden">      {/* 🔮 Fullscreen Responsive Spline Background */}
-      <div className="absolute inset-0 z-0 w-full h-full bg-black">
+      <div className="absolute inset-0 z-0 w-full min-h-full bg-black">
         <Spline
           scene="https://prod.spline.design/A1tAo0vjb7phuODp/scene.splinecode"
           className="w-full h-full  bg-black"
@@ -31,7 +31,7 @@ const HeroSection = () => {
 
 
       {/* 🚀 Hero Content */}
-      <div className="relative z-10 w-full h-[80vh] max-w-8xl mx-auto mt-10 md:mt-24 ">
+      <div className="relative z-10 w-full min-h-[80vh] lg:min-h-screen max-w-8xl mx-auto mt-10 md:mt-24 ">
         <div className="px-4 sm:px-6 md:px-12 lg:px-20 py-6">
           <div className="max-w-6xl mx-auto">
             
