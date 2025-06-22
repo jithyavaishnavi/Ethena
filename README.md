@@ -1,7 +1,7 @@
 Ethena
 A modern, responsive web application built with Next.js, Tailwind CSS, and MongoDB — designed for performance, scalability, and a seamless user experience.
 
-🌐 Live Demo → ethena-wg9g.vercel.app
+Live Demo → ethena-wg9g.vercel.app
 
  Features
  Fast and optimized performance
@@ -14,7 +14,7 @@ A modern, responsive web application built with Next.js, Tailwind CSS, and Mongo
 
  Seamless deployment with Vercel
 
-🛠️ Tech Stack
+Tech Stack -
 Framework: Next.js
 
 UI Library: React
