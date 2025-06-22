@@ -3,6 +3,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { useState } from "react";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,7 @@ export default function RootLayout({ children }) {
 
           {/* 🌟 Logo (Left corner) */}
           <div className="absolute top-3 left-6 text-4xl font-extrabold text-[#ffffff] font-montserrat tracking-wide hover:scale-105 transition-transform cursor-pointer">
-            <a href="/">Ethena</a>
+            <Link href="/">Ethena</Link>
           </div>
 
           {/* Desktop Nav Links (Center) */}
