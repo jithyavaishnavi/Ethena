@@ -90,7 +90,9 @@ const AboutStudyGroup = () => {
                     </span>
                   </div>
                   <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">➔</span>
+                    <a href="https://discord.com/login" target="_blank" rel="noopener noreferrer">
+                      <span className="text-white text-sm">➔</span>
+                    </a>
                   </div>
                 </div>
               </motion.div>
