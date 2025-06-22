@@ -32,7 +32,7 @@ const HeroSection = () => {
 
       {/* 🚀 Hero Content */}
       <div className="relative z-10 w-full h-[80vh] max-w-8xl mx-auto mt-10 md:mt-24 ">
-        <div className="px-4 sm:px-6 md:px-12 lg:px-20 py-">
+        <div className="px-4 sm:px-6 md:px-12 lg:px-20 py-6">
           <div className="max-w-6xl mx-auto">
             
             <h1 className="mt-4 text-5xl md:text-8xl font-extrabold leading-tight tracking-tight">
