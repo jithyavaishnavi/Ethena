@@ -1,10 +1,20 @@
-import mongoose from 'mongoose';
+import dbConnect from '../../lib/dbConnect';
+import Contact from '../../models/Contact';
 
-const contactSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true },
-  message: { type: String, required: true },
-  date: { type: Date, default: Date.now },
-});
+export default async function handler(req, res) {
+  await dbConnect();
 
-export default mongoose.models.Contact || mongoose.model('Contact', contactSchema);
+  if (req.method === 'POST') {
+    try {
+      const contact = new Contact(req.body);
+      await contact.save();
+      res.status(201).json({ success: true });
+    } catch (error) {
+      console.error('Error saving contact:', error);
+      res.status(400).json({ success: false, error: error.message });
+    }
+  } else {
+    res.setHeader('Allow', ['POST']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
+  }
+}

@@ -1,12 +1,20 @@
-import mongoose from 'mongoose';
+import dbConnect from '../../lib/dbConnect';
+import Membership from '../../models/Membership';
 
-const membershipSchema = new mongoose.Schema({
-  fullName: { type: String, required: true },
-  email: { type: String, required: true },
-  phone: String,
-  membershipType: String,
-  message: String,
-  date: { type: Date, default: Date.now },
-});
+export default async function handler(req, res) {
+  await dbConnect();
 
-export default mongoose.models.Membership || mongoose.model('Membership', membershipSchema);
+  if (req.method === 'POST') {
+    try {
+      const membership = new Membership(req.body);
+      await membership.save();
+      res.status(201).json({ success: true });
+    } catch (error) {
+      console.error('Error saving membership:', error);
+      res.status(400).json({ success: false, error: error.message });
+    }
+  } else {
+    res.setHeader('Allow', ['POST']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
+  }
+}

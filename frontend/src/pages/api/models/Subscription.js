@@ -1,20 +1,20 @@
-import mongoose from 'mongoose';
+import dbConnect from '../../lib/dbConnect';
+import Subscription from '../../models/Subscription';
 
-const subscriptionSchema = new mongoose.Schema(
-  {
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      lowercase: true,
-      trim: true,
-    },
-    subscribedAt: {
-      type: Date,
-      default: Date.now,
-    },
-  },
-  { timestamps: true }
-);
+export default async function handler(req, res) {
+  await dbConnect();
 
-export default mongoose.models.Subscription || mongoose.model('Subscription', subscriptionSchema);
+  if (req.method === 'POST') {
+    try {
+      const subscription = new Subscription(req.body);
+      await subscription.save();
+      res.status(201).json({ success: true });
+    } catch (error) {
+      console.error('Error saving subscription:', error);
+      res.status(400).json({ success: false, error: error.message });
+    }
+  } else {
+    res.setHeader('Allow', ['POST']);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
+  }
+}
