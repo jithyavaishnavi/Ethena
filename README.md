@@ -26,7 +26,7 @@ Database: MongoDB
 Deployment: Vercel
 
 
-http://localhost:3000
+
 
 Contributing
 Contributions are welcome!
